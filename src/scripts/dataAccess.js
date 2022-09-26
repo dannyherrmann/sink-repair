@@ -80,7 +80,7 @@ export const editRequest = async (object) => {
         },
         body: JSON.stringify(object)
     }
-    const response = await fetch(`http://localhost:8088/requests/${object.id}`, fetchOptions)
+    const response = await fetch(`${API}/requests/${object.id}`, fetchOptions)
     const responseJson = await response.json(response)
     document.dispatchEvent(new CustomEvent("stateChanged"))
 }

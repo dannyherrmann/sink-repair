@@ -1,0 +1,46 @@
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+/* #submitRequest {
+    margin-top: 20px;
+    font-size: 12px;
+    background-color: #464ea0;
+    border-radius: 2px;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+} */
+
+button {
+    /* margin-top: 20px; */
+    font-size: 12px;
+    background-color: #464ea0;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.serviceForm {
+    width: 400px;
+}
+
+.editPage {
+    width: 400px;
+}
+
+.field {
+    margin: 5px;
+}
+
+.serviceRequest {
+    margin: 20px;
+}
+
+.completedRequests {
+    margin: 20px;
+}

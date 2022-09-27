@@ -153,6 +153,15 @@ mainContainer.addEventListener(
         }
     })
 
+// //Click the Save Request button if user clicks Enter and the saveRequest button is on the DOM
+    mainContainer.addEventListener("keypress", event => {
+        let button = document.querySelector(`[id^="saveRequest--"]`)
+        if (event.key === "Enter" && button != null) {
+            event.preventDefault();
+            document.querySelector(`[id^="saveRequest--"]`).click()
+        }
+    })
+
 //SetupCompleteRequest is used within the change event listener to switch the request's isComplete prop to true instead of false
 
 const setupCompleteRequest = (requestId) => {

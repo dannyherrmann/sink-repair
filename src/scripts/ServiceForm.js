@@ -29,7 +29,7 @@ export const ServiceForm = () => {
 const mainContainer = document.querySelector("#container")
 
 mainContainer.addEventListener("click", clickEvent => {
-    if (clickEvent.target.id === "submitRequest") {
+    if (clickEvent.target.id.startsWith("submitRequest")) {
         // Get what the user typed into the form fields
         const userDescription = document.querySelector("textarea[name='serviceDescription']").value
         const userAddress = document.querySelector("input[name='serviceAddress']").value
@@ -48,6 +48,14 @@ mainContainer.addEventListener("click", clickEvent => {
 
         // Send the data to the API for permanent storage
         sendRequest(dataToSendToAPI)
+    }
+})
+
+//Click the Submit Request button if user clicks Enter
+mainContainer.addEventListener("keypress", event => {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.querySelector(`[id^="submitRequest"]`).click()
     }
 })
 

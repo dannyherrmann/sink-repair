@@ -51,11 +51,12 @@ mainContainer.addEventListener("click", clickEvent => {
     }
 })
 
-//Click the Submit Request button if user clicks Enter
+//Click the Submit Request button if user clicks Enter and saveRequest button is not on the DOM
 mainContainer.addEventListener("keypress", event => {
-    if (event.key === "Enter") {
+    let editButton = document.querySelector(`[id^="saveRequest--"]`)
+    if (event.key === "Enter" && editButton === null) {
         event.preventDefault();
-        document.querySelector(`[id^="submitRequest"]`).click()
+        document.getElementById("submitRequest").click()
     }
 })
 
